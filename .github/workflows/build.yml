@@ -57,7 +57,7 @@ jobs:
     - name: "Determine version"
       run: |
         npm install
-        VERSION=`node scripts/version`
+        VERSION=`node scripts/version tag`
         echo "VERSION=$VERSION" >> $GITHUB_ENV
         if [[ $VERSION != *nightly* ]]; then
           echo "Building release v$VERSION ...";
